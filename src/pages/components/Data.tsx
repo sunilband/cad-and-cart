@@ -1,29 +1,33 @@
 import React from "react";
 import apiData from "../assets/data.json";
 import { Accordion } from "flowbite-react";
+import { useRouter } from 'next/router';
 
 type Props = {
-  visiblity: any;
+ goBack:any,
+ data:any
 };
 
 const Data = (props: Props) => {
-  const data: any = apiData.data;
-
+  // const router:any = useRouter();
+  // const data: any = apiData.data;
+  const data=props.data
+  
   return (
-    <div className="h-screen w-screen p-4 bg-slate-200 ">
+    <div className="h-[100vh] w-screen p-4 bg-slate-200">
       <button
         className="bg-blue-500 text-white rounded-md px-4 py-1 mt-2 hover:scale-105 transition-all ease-in-out duration-100 hover:-translate-y-1 hover:shadow-2xl mb-4"
-        onClick={props.visiblity}
+        onClick={props.goBack}
       >
         back
       </button>
       {/* accordian */}
-      <Accordion className="bg-slate-100 drop-shadow-2xl  ">
+      <Accordion className="bg-slate-100 drop-shadow-2xl scale-95">
         {data.map((item: any, key: any) => {
           return (
             <Accordion.Panel key={key} className="flex flex-col flex-wrap">
               <Accordion.Title>ID: {item.id}</Accordion.Title>
-              <Accordion.Content className="break-words flex-wrap">
+              <Accordion.Content className="break-words flex-wrap  ">
                 <ul>
                   <li>ID: {item.id}</li><hr/>
                   <li>SR No: {item.sr_no}</li><hr/>

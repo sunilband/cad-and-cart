@@ -12,7 +12,7 @@ const Logo = (props: Props) => {
     src={logoImage}
     alt='logo'
     height={90}
-    className='absolute top-14 px-4 sm:-rotate-6'
+    className='absolute top-20 px-4 sm:-rotate-6'
     priority
     />
   )
