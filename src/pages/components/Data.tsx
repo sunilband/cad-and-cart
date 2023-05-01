@@ -13,7 +13,7 @@ const Data = (props: Props) => {
   // const data: any = apiData.data;
   const data=props.data
   
-  return (
+  return (props.data?
     <div className="h-[100vh] w-screen p-4 bg-slate-200">
       <button
         className="bg-blue-500 text-white rounded-md px-4 py-1 mt-2 hover:scale-105 transition-all ease-in-out duration-100 hover:-translate-y-1 hover:shadow-2xl mb-4"
@@ -95,7 +95,7 @@ const Data = (props: Props) => {
           );
         })}
       </Accordion>
-    </div>
+    </div>:null
   );
 };
 

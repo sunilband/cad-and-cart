@@ -13,7 +13,7 @@ const DataCards = (props: Props) => {
 
     const data=props.data
 
-  return (<div className='py-3 bg-slate-50'>
+  return (props.data?<div className='py-3 bg-slate-50'>
         <button
         className="bg-blue-500 text-white rounded-md px-4 py-1 mt-2 hover:scale-105 transition-all ease-in-out duration-100 hover:-translate-y-1 hover:shadow-2xl mb-4 mx-3"
         onClick={props.goBack}
@@ -125,7 +125,7 @@ const DataCards = (props: Props) => {
 
   })}
   </div>
-  </div>
+  </div>:null
    
   )
 }
