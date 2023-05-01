@@ -6,7 +6,8 @@ const cors=require("cors")
 const port=process.env.PORT || 8000
 // read data 
 const fs=require("fs")
-const data=fs.readFileSync(path.resolve("./data.json"),"utf-8")
+const data=fs.readFileSync(path.resolve(__dirname,"./data.json"),"utf-8")
+
 
 // middlewares
 server.use(cors())
