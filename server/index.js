@@ -1,12 +1,13 @@
 const express=require('express')
 require('dotenv').config()
-const server=express()
-const path = require('path');
 const cors=require("cors")
+const server=express()
+server.use(cors())
+const path = require('path');
 const port=process.env.PORT || 8000
 
-// middlewares
-server.use(cors())
+
+
 server.use(express.json())
 // read data 
 const fs=require("fs")
