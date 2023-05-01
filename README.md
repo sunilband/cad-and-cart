@@ -1,5 +1,11 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## valid username and password
+
+username : flutter_api_test
+<br/>
+password : Api@test
+
 ## Getting Started
 
 First, run the development server:
