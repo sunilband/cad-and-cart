@@ -4,14 +4,13 @@ const server=express()
 const path = require('path');
 const cors=require("cors")
 const port=process.env.PORT || 8000
-// read data 
-const fs=require("fs")
-const data=fs.readFileSync(path.resolve(__dirname,"./data.json"),"utf-8")
-
 
 // middlewares
 server.use(cors())
 server.use(express.json())
+// read data 
+const fs=require("fs")
+const data=fs.readFileSync(path.resolve(__dirname,"./data.json"),"utf-8")
 
 // dummy id password verification
 server.post('/api/login/',(req,res)=>{

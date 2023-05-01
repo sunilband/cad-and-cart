@@ -28,7 +28,7 @@ export default function Home() {
     // fetching token
     
     axios
-      .post("http://localhost:8000/api/login/", {
+      .post("http://cadandcartapi.vercel.app/api/login/", {
         username: userName,
         password: userPassword,
       })
@@ -46,7 +46,7 @@ export default function Home() {
       })
        .then(() => {
          axios
-      .get("http://localhost:8000/api/movement_list_all/", {
+      .get("http://cadandcartapi.vercel.app/api/movement_list_all/", {
        headers: { Authorization: `Token ${token}` },
      })
      .then((res: any) => {
