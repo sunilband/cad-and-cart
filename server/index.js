@@ -1,11 +1,12 @@
 const express=require('express')
 require('dotenv').config()
 const server=express()
+const path = require('path');
 const cors=require("cors")
 const port=process.env.PORT || 8000
 // read data 
 const fs=require("fs")
-const data=fs.readFileSync("data.json","utf-8")
+const data=fs.readFileSync(path.resolve("./data.json"),"utf-8")
 
 // middlewares
 server.use(cors())

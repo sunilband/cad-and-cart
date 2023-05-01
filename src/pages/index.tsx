@@ -18,6 +18,7 @@ export default function Home() {
   const [userPassword, setPassword] = useState("");
   
   
+
   const goBack=()=>{
     setVisible(!visible)
   }
@@ -27,7 +28,7 @@ export default function Home() {
     // fetching token
     
     axios
-      .post("http://cadandcartapi/api/login/", {
+      .post("http://localhost:8000/api/login/", {
         username: userName,
         password: userPassword,
       })
@@ -45,7 +46,7 @@ export default function Home() {
       })
        .then(() => {
          axios
-      .get("http://cadandcartapi/api/movement_list_all/", {
+      .get("http://localhost:8000/api/movement_list_all/", {
        headers: { Authorization: `Token ${token}` },
      })
      .then((res: any) => {
